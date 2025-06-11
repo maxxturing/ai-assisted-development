@@ -1,80 +1,98 @@
 **IMPORTANT FOR CLAUDE: Reference this file before implementing anything**
 
-# Project: [Project Name]
+# Project: Travel Planning App
 
 ## Project Overview
 
-A brief description of the project, its purpose, and key goals.
+A universal travel planning application built with Solito that allows users to manage trips and create packing lists. The app provides native mobile experience while maintaining full web functionality. Focus on Trip Management and Packing Lists features only.
 
 ## Tech Stack
 
-- Languages: [list primary languages]
-- Frameworks: [list frameworks]
-- Tools: [list tools]
+- Language: TypeScript (strict mode)
+- Frontend: Solito (React Native + Next.js)
+- Styling: Tamagui (Universal Design System)
+- Database: SQLite with Drizzle ORM
+- State Management: React Query (TanStack Query) + Custom Hooks
+- Package Manager: Yarn
+- Mobile: React Native with Expo
+- Web: Next.js
 
 ## Code Style & Conventions
 
 ### Import/Module Standards
 
-- [Specify import standards]
+- External libraries first
+- Internal packages second  
+- Relative imports last
+- Empty lines between groups
 
 ### Naming Conventions
 
-- [Functions naming convention]
-- [Classes/Components naming convention]
-- [Constants naming convention]
-- [Files naming convention]
+- Files: kebab-case for components (`trip-list.tsx`), camelCase for utilities (`formatDate.ts`)
+- Components: PascalCase (`TripList`, `PackingItem`)
+- Hooks: camelCase with 'use' prefix (`useTrips`, `usePackingItems`)
+- Constants: UPPER_SNAKE_CASE (`MAX_TRIP_NAME_LENGTH`)
+- Database tables: camelCase (`packingItems`, `packingLists`)
 
 ### Patterns to Follow
 
-- [Key architectural patterns]
-- [Error handling approaches]
-- [Code organisation principles]
+- Business logic in custom hooks only
+- Components focused on UI presentation only
+- Shared utilities in appropriate packages
+- React Query for all server state
+- Optimistic updates for user interactions
+- Error boundaries + Toast notifications for error handling
 
 ## Development Workflow
 
-- Branch strategy
-- Commit message format
-- PR requirements
+- Branch strategy: feature branches (`feature/trip-management`, `feature/packing-lists`)
+- Commit message format: Conventional commits (`feat:`, `fix:`, `docs:`)
+- PR requirements: Code review required, proper commit messages
 
 ## Testing Strategy
 
-- Test frameworks
-- Coverage requirements
-- Test naming conventions
+- Framework: Jest + React Testing Library (minimal testing approach)
+- Focus: Critical business logic and custom hooks only
+- Coverage: Essential tests only due to workshop scope
 
 ## Environment Setup
 
-- Required environment variables
-- Setup commands
-- Local development server
+- Node.js with Yarn package manager
+- Expo CLI for mobile development
+- SQLite database (local file)
 
 ## Common Commands
 
 ```bash
-# Build command
-[command]
+# Install dependencies
+yarn install
 
-# Test command
-[command]
+# Development server (web)
+yarn web
 
-# Lint command
-[command]
+# Development server (mobile)
+yarn native
 
-# Check command
-[command]
+# Build web
+yarn build:web
 
-# Development server
-[command]
+# Build mobile
+yarn build:native
+
+# Type check
+yarn type-check
 ```
 
 ## Project Structure
 
-Key directories and their purpose:
+Monorepo package organization:
 
-- `/src` - [description]
-- `/tests` - [description]
-- [other important directories]
+- `/packages/app` - Shared navigation and business logic
+- `/packages/ui` - Universal Tamagui components
+- `/packages/db` - Drizzle schema and database queries
+- `/packages/config` - Shared TypeScript and build configs
+- `/apps/expo` - Mobile application
+- `/apps/next` - Web application
 
 ## Review Process Guidelines
 
