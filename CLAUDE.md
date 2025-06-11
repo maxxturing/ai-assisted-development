@@ -42,6 +42,9 @@ A universal travel planning application built with Solito that allows users to m
 - React Query for all server state
 - Optimistic updates for user interactions
 - Error boundaries + Toast notifications for error handling
+- Platform-specific builds with shared universal types
+- Gradual feature enablement (disable complex dependencies in early tasks)
+- Database-agnostic query patterns using Drizzle ORM
 
 ## Development Workflow
 
@@ -121,7 +124,15 @@ Before submitting any code, ensure the following steps are completed:
 
 ## Known Issues & Workarounds
 
-Document any current limitations or workarounds Claude should be aware of.
+### Task 1 Temporary Limitations
+- **Tamagui Components**: Disabled to avoid dependency conflicts - enable in Task 2
+- **Database Package**: Removed from web build for Vercel deployment - Turso integration in Task 3
+- **Screen Components**: Temporarily excluded from exports to avoid Tamagui imports
+
+### Deployment Patterns Established
+- **Vercel**: Requires react-native-web aliasing and transpilePackages configuration
+- **Native Dependencies**: Avoid packages requiring compilation (better-sqlite3, etc.)
+- **Monorepo**: Use vercel.json for proper routing, exclude problematic packages from web builds
 
 ## References
 

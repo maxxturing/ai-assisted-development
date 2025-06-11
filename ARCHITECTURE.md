@@ -186,7 +186,8 @@ App
 
 ### Production Considerations
 - Turso edge replicas for global performance
-- Git-like database branching for feature development
-- Platform-specific build optimizations
+- Vercel serverless deployment with monorepo support
+- Platform-specific build optimizations with transpilation
 - Error monitoring and logging setup
 - Universal database access pattern (web + mobile)
+- Gradual dependency activation pattern for complex integrations
