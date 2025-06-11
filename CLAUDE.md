@@ -11,7 +11,7 @@ A universal travel planning application built with Solito that allows users to m
 - Language: TypeScript (strict mode)
 - Frontend: Solito (React Native + Next.js)
 - Styling: Tamagui (Universal Design System)
-- Database: SQLite with Drizzle ORM
+- Database: Turso (LibSQL) with Drizzle ORM
 - State Management: React Query (TanStack Query) + Custom Hooks
 - Package Manager: Yarn
 - Mobile: React Native with Expo
@@ -59,7 +59,7 @@ A universal travel planning application built with Solito that allows users to m
 
 - Node.js with Yarn package manager
 - Expo CLI for mobile development
-- SQLite database (local file)
+- Turso database (edge-distributed LibSQL)
 
 ## Common Commands
 

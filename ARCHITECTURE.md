@@ -6,7 +6,7 @@
 - **Language**: TypeScript
 - **Frontend**: Solito (React Native + Next.js)
 - **Styling**: Tamagui (Universal Design System)
-- **Database**: SQLite with Drizzle ORM
+- **Database**: Turso (LibSQL) with Drizzle ORM
 - **Package Manager**: Yarn
 - **State Management**: React Query (TanStack Query) + Custom Hooks
 
@@ -179,11 +179,14 @@ App
 ## Deployment Architecture
 
 ### Development
-- Local SQLite database
+- Local Turso database (LibSQL)
 - Hot reloading for rapid development
 - Shared development environment
+- Edge-distributed database for optimal performance
 
 ### Production Considerations
-- Database migration strategy
+- Turso edge replicas for global performance
+- Git-like database branching for feature development
 - Platform-specific build optimizations
 - Error monitoring and logging setup
+- Universal database access pattern (web + mobile)

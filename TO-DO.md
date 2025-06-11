@@ -47,20 +47,23 @@ Building a universal travel planning app with Solito (React Native + Next.js), f
 ---
 
 ### 3. Database Schema and Setup
-**Description**: Create database schema using Drizzle ORM with SQLite
+**Description**: Create database schema using Drizzle ORM with Turso (LibSQL)
 
 **Deliverables**:
-- Database schema in `packages/db/schema.ts`
-- Database connection utilities
-- Migration setup
+- Turso database setup and configuration
+- Database schema in `packages/db/schema.ts` (LibSQL compatible)
+- Turso connection utilities with edge optimization
+- Migration setup using Drizzle Kit
 - Basic CRUD operations for all entities
 
 **Dependencies**: Task 2
 
 **Definition of Done**:
-- ✅ Schema matches data models in specifications
-- ✅ Database file created and tables initialized
+- ✅ Turso database created and configured
+- ✅ Schema matches data models in specifications  
+- ✅ Edge-distributed database connection working
 - ✅ Basic queries working (insert, select, update, delete)
+- ✅ Environment variables configured for development and production
 
 ---
 

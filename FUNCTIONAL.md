@@ -50,9 +50,10 @@ A universal travel planning application built with Solito (React Native + Next.j
 
 ### Performance Requirements
 - Optimistic updates for packing item toggles
-- Offline-first approach with data synchronization
+- Edge-distributed database with global performance via Turso
 - Fast navigation between screens
 - Responsive design for various screen sizes
+- Universal database access pattern for web and mobile
 
 ## User Experience
 
